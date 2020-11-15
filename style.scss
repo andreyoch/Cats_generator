@@ -1,0 +1,81 @@
+$time: 300ms;
+
+.container {
+   max-width: 75%;
+   margin: 0 auto;
+   border: 1px solid black;
+}
+
+.flex-row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+.img-container {
+   max-width: 400px;
+   padding: 10px;
+}
+img {
+   width: 100%;
+}
+.content {
+   text-align: center;
+}
+
+.input {
+   font-size: 1.5em;
+
+}
+.text {
+   margin-bottom: 10px;
+}
+
+.btn {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  padding: 1.25rem 2rem;
+  font-size: 1rem;
+  border-radius: 3.5rem / 100%;
+  position: relative;
+  min-width: 15rem;
+  max-width: 90vw;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all $time;
+  
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &:before {
+    content: "";
+    background-color: #21D4FD;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(4) translateX(-100%);
+    transition: all $time * 1.5 ease-out;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {    
+    &:before {
+      transform: scale(4) translate(37%);
+    } 
+  }
+}
+
+.btn {
+   margin: 20px 0;
+}
+
+
+
+ 
