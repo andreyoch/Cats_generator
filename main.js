@@ -16,15 +16,14 @@ for(let i = 0; i < input.value; i++) {
    imgContainer.classList.add('img');
    let img = document.createElement('img');
    imgContainer.appendChild(img);
-   let src = document.createAttribute('src');
-   src.value = 'http://thecatapi.com/api/images/get?format=src&type=gif&size=small';
-   img.setAttributeNode(src);
+   img.src = 'http://thecatapi.com/api/images/get?format=src&type=gif&size=small'
    let container = document.querySelector('.flex-row');
    container.appendChild(imgContainer);
 }
- input.value = '';
 
-   }
+
+
+}
    else {
       alert('Please provide a number');
    }
